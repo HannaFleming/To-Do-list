@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(226,31,91);
+    background: linear-gradient(342deg, rgba(226,31,91,0.5161414907759979) 0%, rgba(218,248,0,1) 100%);
+    color:rgb(100, 94, 94);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+header{
+    font-size:20px;
+}
+header,form {
+    min-height: 20vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+form input, form button { 
+    padding: 10px;
+    font-size: 30px;
+    border:none;
+    background: white;
+}
+form button{
+    color: rgb(178, 19, 154);
+    background: white;
+    cursor:pointer;
+    transition: all 0.3s ease;
+
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width:30%;
+    list-style:none;
+
+
+}
+.todo {
+    margin:0.5rem;
+    background: white;
+    color:black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+.todo li{
+    flex:1;
+}
+.trash-btn, .complete-btn {
+background-color: coral;
+color:white;
+border:none;
+padding:1rem;
+cursor:pointer;
+font-size: 10px;
+
+}
+.complete-btn{
+    background: rgb(48, 212, 48);
+}
+
+.todo-item{
+    padding:0px 15px ;
+}
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+
+}
+
+.fall{
+    transform:translateY(10rem) rotateZ(20deg);
+    opacity: 0; 
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline:none;
+    border:none;
+}
+.select {
+    margin:1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: rgb(192, 128, 0);
+    width:10rem;
+    cursor:pointer;
+    padding: 1rem;
+}
+.select::after{
+    content:"\25BC";
+    position: absolute;
+    background: coral;
+    color:white;
+    top:0;
+    right:0;
+    padding:1rem;
+    pointer-events: none;
+    transition:all 0.3s ease;
+}
+.select:hover::after{
+    background-color: rgb(48, 212, 48);
+    color:white;
+}
+
+@media all and (max-width:500px){
+    input{
+        width:35%;
+    }
+}
